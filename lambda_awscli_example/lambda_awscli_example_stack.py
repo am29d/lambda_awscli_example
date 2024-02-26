@@ -19,6 +19,6 @@ class LambdaAwscliExampleStack(Stack):
             memory_size=1024,
             layers=[
                 AwsCliLayer(self, 'AwsCliLayer'), 
-                LayerVersion.from_layer_version_arn(self, 'Powertools', 'arn:aws:lambda:eu-west-1:017000801446:layer:AWSLambdaPowertoolsPythonV2:64')
+                LayerVersion.from_layer_version_arn(self, 'Powertools', f'arn:aws:lambda:{self.region}:017000801446:layer:AWSLambdaPowertoolsPythonV2:64')
             ]
         )
