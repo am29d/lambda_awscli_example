@@ -3,6 +3,8 @@ from aws_lambda_powertools import Logger
 
 logger = Logger()
 
+
+
 def handler(event, context): 
   try: 
     command = '/opt/awscli/aws sts get-caller-identity'
